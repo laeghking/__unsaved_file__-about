@@ -1,68 +1,174 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع kspr</title>
-    <style>
-        body {
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-            color: white;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            padding-top: 60px;
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: #00ffcc;
-        }
-
-        p {
-            font-size: 22px;
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-
-        .social-btn {
-            display: inline-block;
-            margin: 10px;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 18px;
-            color: white;
-            transition: 0.3s ease;
-        }
-
-        .instagram {
-            background-color: #E1306C;
-        }
-
-        .instagram:hover {
-            background-color: #c72b5e;
-        }
-
-        .telegram {
-            background-color: #0088cc;
-        }
-
-        .telegram:hover {
-            background-color: #007ab8;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>kspr - الموقع الرسمي</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1517817748497-933ac4aa7a3f') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      margin: 0;
+    }
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 2;
+      top: 0;
+      right: 0;
+      background-color: #111c;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    .sidebar a {
+      padding: 15px 25px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #00ffcc;
+      display: block;
+      transition: 0.3s;
+    }
+    .sidebar a:hover {
+      background-color: #222;
+    }
+    .sidebar .closebtn {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      font-size: 30px;
+    }
+    .openbtn {
+      font-size: 24px;
+      background-color: #00ffcc;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      position: fixed;
+      right: 15px;
+      top: 15px;
+      z-index: 3;
+      border-radius: 5px;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      width: 140px;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 10px;
+      border-radius: 12px;
+    }
+    h1 {
+      font-size: 42px;
+      color: #00ffcc;
+    }
+    p {
+      font-size: 20px;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .card {
+      background-color: #222a;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px auto;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(0,255,204,0.2);
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .gallery img {
+      width: 200px;
+      border-radius: 10px;
+      border: 2px solid #00ffcc;
+      box-shadow: 0 0 10px #00ffcc88;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111c;
+      color: #aaa;
+      font-size: 14px;
+      border-top: 1px solid #333;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>أهلًا بك في موقع kspr</h1>
-    <p>هذا موقعي الشخصي. أشارك فيه أعمالي واهتماماتي، وصور من حياتي الرقمية والمهنية. شكرًا لزيارتك!</p>
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#home">🏠 الرئيسية</a>
+  <a href="#about">👤 من أنا</a>
+  <a href="#gallery">🖼️ المعرض</a>
+  <a href="#contact">✉️ اتصل بي</a>
+</div>
 
-    <div style="margin-top: 30px;">
-        <a href="https://www.instagram.com/s7j_r?igsh=aWpjY3Vxd2lib2k=" target="_blank" class="social-btn instagram">تابعني على إنستقرام</a>
-        <a href="https://t.me/L_313La" target="_blank" class="social-btn telegram">راسلني على تيليجرام</a>
-    </div>
+<button class="openbtn" onclick="openNav()">☰ القائمة</button>
+
+<header>
+  <img src="kspr-logo.png" alt="kspr logo">
+</header>
+
+<section id="home">
+  <h1>مرحبًا بك في kspr</h1>
+  <p>هذا الموقع هو مساحة شخصية أنيقة واحترافية. يمكنك التواصل معي من خلال الروابط أدناه ومتابعة آخر المستجدات.</p>
+</section>
+
+<section id="about">
+  <div class="card">
+    <h2>من أنا</h2>
+    <p>أنا kspr، مهتم بالتقنية والتصميم والمحتوى الرقمي. أشارك مهاراتي من خلال هذا الموقع، وأسعى لتقديم الأفضل دائمًا في مجالات الإبداع والتواصل.</p>
+  </div>
+  <div class="card">
+    <h2>ماذا أقدم؟</h2>
+    <p>تصميم مواقع بسيطة وأنيقة، مساعدات تقنية، كتابة إبداعية، والمزيد! يمكنك التواصل معي لأي فكرة أو تعاون.</p>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>معرض الصور</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="صورة تجريبية 1">
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="صورة تجريبية 2">
+    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" alt="صورة تجريبية 3">
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card">
+    <h2>اتصل بي</h2>
+    <p>يمكنك التواصل معي عبر إنستقرام:</p>
+    <a href="https://www.instagram.com/s7j_r?igsh=aWpjY3Vxd2lib2k=" target="_blank" class="social-btn instagram">إنستقرام</a>
+  </div>
+</section>
+
+<footer>
+  جميع الحقوق محفوظة © kspr 2025
+</footer>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+}
+</script>
 
 </body>
 </html>
